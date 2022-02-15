@@ -1,0 +1,34 @@
+<table>
+<strong>Name:</strong>
+
+<%= @student.name %>
+</p>
+<p>
+
+<strong>Subject:</strong>
+
+<%= @student.subject %>
+
+</p>
+<strong>Marks:</strong>
+
+<%= @student.marks %>
+
+</p>
+<p>
+<strong>Grade:</strong>
+
+<%= @student.grade %>
+
+
+<br>
+
+<h3>Main Image:</h3>
+<%= image_tag @student.main_image if @student.main_image.present? %>
+
+</p>
+<%= link_to 'Back', :back %>
+</table>
+
+
+

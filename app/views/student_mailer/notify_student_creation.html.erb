@@ -1,0 +1,13 @@
+<h1>Hi</h1>
+<p>
+there is a new student created <br>
+</p>
+<p>
+Name: <%= @student.name %><br>
+subject: <%= @student.subject %><br>
+Marks: <%= @student.marks %><br>
+Grade: <%= @student.grade %><br>
+CreatedAt: <%= @student.created_at %> <br>
+To view the full student details: <%= link_to "click here" , student_url(@student) %>
+</p>
+<p> have a great day </p> 

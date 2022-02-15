@@ -1,0 +1,12 @@
+<h3> profile fields: </h3>
+<div>
+<%= f.fields_for :profile do |p| %>
+  <div class="field">
+  <%= p.label :name %><br />
+  <%= p.text_field :name %>
+  </div>
+  <div class="field">
+  <%= p.label :address %><br />
+  <%= p.text_field :address %>
+  </div>
+  <% end %>

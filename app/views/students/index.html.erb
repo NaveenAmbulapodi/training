@@ -1,0 +1,28 @@
+<h2>students list </h2>
+
+<%= render 'form1', student: @student %>
+<table " border: 1px solid black;">
+<thead>
+<th>Name</th>
+<th>Subject</th>
+<th>Marks</th>
+<th>Grade</th>
+</thead>
+<tbody>
+<% @students.each do |student| %>
+<tr>
+<td><%= student.name %> </td>
+<td><%= student.subject %></td>
+<td><%= student.marks %></td>
+<td><%= student.grade %></td>
+<td>
+<%= link_to "Show", student_path(student) %>
+<%= link_to "Edit", edit_student_path(student) %>
+<%= link_to "delete", student_path(student), method: :delete, data: { confirm: "are u sure"} %>
+<%= link_to "download PDF", download_pdf_student_path(student) %>
+</td>
+</tr>
+<% end %>
+</tbody>
+</table>
+<%= link_to "New",new_student_path %>

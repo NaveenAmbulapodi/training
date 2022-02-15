@@ -1,0 +1,14 @@
+<div>
+
+<%= form_with url: students_path, method: 'get' do |f| %>
+# form with without model
+Search:
+
+<%= f.text_field :q, value: params[:q],placeholder:'Search employee by emp_name' %>
+
+<%= f.submit "search" %>
+<%= link_to "clear", students_path %>
+
+<% end %>
+
+</div>
