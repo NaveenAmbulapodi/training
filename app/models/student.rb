@@ -5,7 +5,7 @@ class Student < ApplicationRecord
       # validates :name, inclusion: { in: %w(kishore venkat), message: "%{value} is not in
         # the included list." }
        validates :name, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }
-
+       SUBJECTS = ['hot', 'medium', 'cold']
       # validates :marks, numericality: true
        #validates :name, uniqueness: true
 #
@@ -23,16 +23,16 @@ class Student < ApplicationRecord
 #   end
   ## or ##
 
-  after_initialize :method_after_init
-  after_find :method_after_find
-  after_find :method_after_find, if: :check_the_condition?
-  after_touch :method_after_touch 
-   before_save :method_before_save
-  after_save :method_after_save
-     around_save :method_around_save
-     after_destroy :method_after_destroy
-     after_commit :method_after_commit, on: [:create]
-     after_rollback :method_after_rollback
+  # after_initialize :method_after_init
+  # after_find :method_after_find
+  # after_find :method_after_find, if: :check_the_condition?
+  # after_touch :method_after_touch 
+  #  before_save :method_before_save
+  # after_save :method_after_save
+  #    around_save :method_around_save
+  #    after_destroy :method_after_destroy
+  #    after_commit :method_after_commit, on: [:create]
+  #    after_rollback :method_after_rollback
 
   ## scopes ##
   # scope :matching, ->(q) { where(name: q)}

@@ -2,12 +2,15 @@ Rails.application.routes.draw do
 
   resources :schools
   # devise_for :users
+  get 'students/aboutus'
+  get 'students/contact'
+  get 'students/latest'
   resources :students do
     member do
       get 'download_pdf'
     end
   end
-   root to: "students#index"
+   root to: "students#home"
    namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
       resources :students

@@ -1,0 +1,12 @@
+<%# <h2> Welcome to students portal </h2> %>
+<%= nav_bar fixed: :top, brand: "students" do %>
+    <%= menu_group do %>
+        <%= menu_item "Home", root_path %>
+        <%= menu_item "students list", students_path%>
+        <%= menu_item "About Us", students_aboutus_path %>
+        <%= menu_item "Contact", students_contact_path %>
+
+      
+     <% end %>
+   <% end %>
+   
