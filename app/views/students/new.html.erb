@@ -1,8 +1,1 @@
 <%= render 'form', student: @student %>
-<% form_for @student do |f| %>
-  <%= f.text_field :name %>
-  <%= f.collection_select :subject, Student::SUBJECTS, :to_s, :to_s, 
-       :include_blank => true
-  %>
-  <%= f.submit "Create" %> 
-  <% end %>

@@ -5,7 +5,7 @@ class Student < ApplicationRecord
       # validates :name, inclusion: { in: %w(kishore venkat), message: "%{value} is not in
         # the included list." }
        validates :name, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }
-       SUBJECTS = ['hot', 'medium', 'cold']
+       
       # validates :marks, numericality: true
        #validates :name, uniqueness: true
 #
