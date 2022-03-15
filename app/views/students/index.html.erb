@@ -1,11 +1,11 @@
- <div style="text-align:center"; ><h3><%= tag_label('Stusents list', :success) %></h3></div>
+ <div style="text-align:center"; ><h3><%= tag_label('Students list', :success) %></h3></div>
 <div style= "text-align:right; padding-right:420px; padding-bottom:0px";><%= render 'form1', student: @student%></div>
 
 
 <br>
 </h3> <%= render_breadcrumbs %>
 <br>
-<table >
+<table border="3" bordercolor=black; >
 <thead>
 <br>
 <th>Name</th>
@@ -32,10 +32,8 @@
 </table>
 <br>
 <%= link_to "New",new_student_path %>
-<div ..ml-1 {
-  margin-top: ($spacer * .500) !important;
-}
 <%= nav_bar fixed: :top do %>
+
     <%= menu_item "Home", root_path %>
 
     <%= drop_down "students" do %>

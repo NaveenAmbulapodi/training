@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-    add_breadcrumb "", :root_path
+    add_breadcrumb "home", :root_path
   
     before_action :load_filters, only: ['edit','update','show','destroy','download_pdf']
     def index
@@ -16,9 +16,10 @@ class StudentsController < ApplicationController
         
     end 
         def show
-    
+            add_breadcrumb 'show', student_path, title: "Back to the Index"
         end
         def new
+            add_breadcrumb 'New', student_path, title: "Back to the Index"
         @student=Student.new
         end
         def create
@@ -31,19 +32,23 @@ class StudentsController < ApplicationController
         end
         end
         def edit
-            Rails.logger.debug"\n i am in before action \n"
+            add_breadcrumb 'Edit', student_path, title: "Back to the Index"
+    
         end
         def home
+            add_breadcrumb 'Home', student_path, title: "Back to the Index"
         end
 
         def aboutus
+            add_breadcrumb 'About Us', student_path, title: "Back to the Index"
         end
         def contact
+            add_breadcrumb 'Contact', student_path, title: "Back to the Index"
         end
 
         def latest
         end
-        add_breadcrumb "home", :root_path
+       
 
         def update
        
