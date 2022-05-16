@@ -1,10 +1,9 @@
- <div style="text-align:center"; ><h3><%= tag_label('Students list', :success) %></h3></div>
-<div style= "text-align:right; padding-right:420px; padding-bottom:0px";><%= render 'form1', student: @student%></div>
-
+<div style="text-align:center"; ><h3><%= tag_label('Students list', :success) %></h3></div>
+<div style= "text-align:right; padding-right:430px; padding-bottom:0px";><%= render 'form1', student: @student%></div>
 
 <br>
-</h3> <%= render_breadcrumbs %>
 <br>
+<center>
 <table border="3" bordercolor=black; >
 <thead>
 <br>
@@ -32,24 +31,7 @@
 </table>
 <br>
 <%= link_to "New",new_student_path %>
-<%= nav_bar fixed: :top do %>
-
-    <%= menu_item "Home", root_path %>
-
-    <%= drop_down "students" do %>
-        <%= menu_item "Latest", students_latest_path %>
-        <%= menu_item "Top Sellers", new_student_path %>
-        <%= menu_item "Discount Items", new_school_path %>
-    <% end %>
-
-    <%= menu_item "About Us", students_aboutus_path %>
-    <%= menu_item "Contact", students_contact_path %>
-<% end %>
+ <%= render 'bootstrap' %>
 </div>
-
-<%= glyph(:pencil) %> <i class="icon-pencil"></i>
-
-<%= glyph(:pencil, {tag: :span}) %> <span class="icon-pencil"></span>
-
-<%= glyph(:pencil, {class: 'foo'}) %> <i class="icon-pencil foo"></i>
+</center>
 

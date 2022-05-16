@@ -1,0 +1,18 @@
+<%= nav_bar fixed: :top do %>
+  
+    <%= menu_group do %>
+      
+       <%= menu_item "Home", root_path %>
+        <%= menu_item "students list", students_path%>
+        <%= menu_item "About Us", students_aboutus_path %>
+        <%= menu_item "Contact", students_contact_path %>
+        <div style= "padding-left:920px; padding-top:18px;">
+        <%= link_to current_user.email, edit_user_registration_path(current_user) %> 
+        </div>
+        
+      
+      
+     <% end %>
+     <% end %>
+     
+  

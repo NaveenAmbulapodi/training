@@ -5,11 +5,10 @@ ruby '3.0.2'
 gem 'omniauth-github'
 gem "omniauth-rails_csrf_protection"
 
-# gem "therubyracer"
+ gem "therubyracer"
 # gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 
-gem "breadcrumbs_on_rails"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'

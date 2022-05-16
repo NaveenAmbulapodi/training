@@ -4,3 +4,18 @@
   Static version of css will use Glyphicons sprites by default
   =require twitter-bootstrap-static/sprites
 */
+.navbar {
+  background-color: #b1ceeb;
+
+}
+.navbar .nav > li > a:hover {
+  color: rgb(9, 17, 91);
+  float: none;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-shadow: 0 0px 0 #2f0ed7;
+  background-color: transparent;
+}
+.navbar-link:hover {
+  color: white;
+}

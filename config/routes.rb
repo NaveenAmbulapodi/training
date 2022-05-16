@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get 'download_pdf'
     end
   end
+  
    root to: "students#home"
    namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
@@ -17,7 +18,9 @@ Rails.application.routes.draw do
        resources :schools
       end
     end
-    # devise_for :users, controllers: {registrations: 'users/registrations'}
-    devise_for :users, :controllers => {:omniauth_callbacks => "callbacks" }
+    
+devise_for :users, controllers: {registrations: "users/registrations", omniauth_callbacks: "callbacks"}
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

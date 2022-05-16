@@ -16,11 +16,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     private
     def sign_up_params
     devise_parameter_sanitizer.sanitize(:sign_up)
-    params.require(:user).permit:(:name, :email, :password, :password_confirmation,
-    profile_attributes: [:id, :name, :address])
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, profile_attributes: [:id, :name, :address])
     end
     def account_update_params
     params.require(:user).permit(:name, :current_password, :email, :password,
     :password_confirmation, profile_attributes: [:id, :name, :address])
     end
-    end
+end
